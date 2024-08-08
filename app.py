@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 from marshmallow import fields, ValidationError
@@ -6,7 +7,6 @@ from sqlalchemy import delete, select
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 from typing import List
 import datetime
-from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
